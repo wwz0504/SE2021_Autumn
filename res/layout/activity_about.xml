@@ -76,4 +76,11 @@
         android:drawableLeft="@drawable/ic_other_apps"
         android:text="@string/other_apps" />
 
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/list_item_selected_pressed"
+        android:text="Message" />
+
 </LinearLayout>

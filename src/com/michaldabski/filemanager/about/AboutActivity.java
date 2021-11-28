@@ -32,6 +32,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.michaldabski.filemanager.R;
 import com.michaldabski.utils.FontApplicator;
@@ -65,6 +66,7 @@ public class AboutActivity extends Activity implements OnClickListener
 		
 		findViewById(R.id.btnFeedback).setOnClickListener(this);
 		findViewById(R.id.btnPlaystore).setOnClickListener(this);
+		findViewById(R.id.button).setOnClickListener(this);
 	}
 	
 	/**
@@ -113,6 +115,18 @@ public class AboutActivity extends Activity implements OnClickListener
 				catch (Exception e)
 				{
 					e.printStackTrace();
+				}
+				break;
+
+			case R.id.button:
+				try{
+					Intent faqIntent = new Intent(this, com.michaldabski.filemanager.MessageActivity.class);
+					startActivity(faqIntent);
+				}
+				catch (Exception e)
+				{
+					//e.printStackTrace();
+					Toast.makeText(this,"error",Toast.LENGTH_SHORT).show();
 				}
 				break;
 				
